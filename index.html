@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARYAN RAJ | THE UNIVERSAL CODEX</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;400;600&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --neon-blue: #00f2ff;
+            --electric-gold: #ffcc00;
+            --bg-deep: #050505;
+        }
+
+        body, html {
+            margin: 0; padding: 0;
+            background: var(--bg-deep);
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%; height: 100%;
+            top: 0; left: 0;
+            z-index: 0;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        .page {
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 120px 20px;
+            box-sizing: border-box;
+            z-index: 1;
+        }
+
+        /* Glass Narrative Box */
+        .story-box {
+            max-width: 850px;
+            background: rgba(10, 10, 15, 0.9);
+            padding: 60px;
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+            border-top: 4px solid var(--neon-blue);
+        }
+
+        .sport-title {
+            font-family: 'Syncopate', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            letter-spacing: 4px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            color: var(--neon-blue);
+            font-size: 0.8rem;
+            letter-spacing: 5px;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .content-text {
+            line-height: 1.9;
+            font-size: 1.15rem;
+            color: #d1d1d1;
+            text-align: justify;
+            white-space: pre-line;
+        }
+
+        /* Navigation Dock & Search */
+        .nav-dock {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0,0,0,0.95);
+            padding: 15px 25px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            gap: 15px;
+            z-index: 1000;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.9);
+        }
+
+        .search-container {
+            width: 100%;
+            position: relative;
+        }
+
+        #codexSearch {
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: white;
+            font-family: 'Space Grotesk';
+            font-size: 0.8rem;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        #codexSearch:focus {
+            border-color: var(--neon-blue);
+            background: rgba(0, 242, 255, 0.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-family: 'Syncopate', sans-serif;
+            font-size: 0.55rem;
+            transition: 0.3s;
+        }
+
+        .nav-btn.active, .nav-btn:hover { color: var(--neon-blue); }
+        .founder-btn { color: var(--electric-gold) !important; }
+
+        @media (max-width: 600px) {
+            .story-box { padding: 30px; }
+            .nav-dock { width: 90%; bottom: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <section class="page" id="p-aryan">
+        <div class="story-box" style="border-top-color: var(--electric-gold); text-align: center;">
+            <h1 class="sport-title" style="color: var(--electric-gold);">ARYAN RAJ</h1>
+            <span class="tagline" style="color: #fff;">EE & AI ARCHITECT</span>
+            <p class="content-text">
+                I work at the intersection of Electrical Engineering and AI. From power systems, EV tech, and lightning protection to Python, machine learning, and data analytics, I build systems that are both theoretically strong and practically deployable.
+                
+                I design AI-driven prediction models, analyze data with pandas & matplotlib, and develop API-based web platforms—all while staying rooted in GATE/IES-level EE fundamentals.
+            </p>
+        </div>
+    </section>
+
+    <section class="page" id="p-cricket">
+        <div class="story-box">
+            <h2 class="sport-title">Cricket</h2>
+            <span class="tagline">A Game That Teaches You How to Wait</span>
+            <p class="content-text">Cricket was never meant to be rushed. It was born in open fields where time moved slowly and patience was not a weakness but a virtue. In its earliest days, cricket was played not for trophies or fame, but for character. It taught players how to stand still for hours, how to respect silence, and how to respond when pressure builds quietly rather than loudly.
+            
+            Every delivery in cricket carries a lesson. Sometimes you defend because survival matters. Sometimes you attack because the moment demands courage. Cricket mirrors life more than any other sport—it rewards those who stay calm under pressure and punishes arrogance.</p>
+        </div>
+    </section>
+
+    <section class="page" id="p-football">
+        <div class="story-box" style="border-top-color: #ff3e3e;">
+            <h2 class="sport-title">Football</h2>
+            <span class="tagline" style="color: #ff3e3e;">The World’s Shared Heartbeat</span>
+            <p class="content-text">Football was born with nothing—just a ball and open ground. That simplicity made it powerful. It became the voice of the streets, the game of the working class, the dream of children who had nothing but belief.
+            
+            Football is emotion without filters. One goal can bring a nation to tears. One mistake can haunt a lifetime. It is a game where teamwork matters more than talent, where sacrifice creates legends, and where unity defeats individuality. The underdog can win. The strongest can fall.</p>
+        </div>
+    </section>
+
+    <section class="page" id="p-basketball">
+        <div class="story-box" style="border-top-color: #ffa500;">
+            <h2 class="sport-title">Basketball</h2>
+            <span class="tagline" style="color: #ffa500;">Speed, Hustle, and Self-Belief</span>
+            <p class="content-text">Basketball was created to keep people moving, but it evolved into a game of rhythm, confidence, and courage. Played in tight spaces, it teaches quick thinking and faster decisions. 
+            
+            The game builds leaders. Every player must defend, attack, communicate, and adapt. Basketball doesn’t wait for perfection—it rewards effort. It’s about heart, vision, and confidence. It shapes mindset.</p>
+        </div>
+    </section>
+
+    <section class="page" id="p-boxing">
+        <div class="story-box" style="border-top-color: #ffffff;">
+            <h2 class="sport-title">Boxing</h2>
+            <span class="tagline" style="color: #fff;">The Fight Within</span>
+            <p class="content-text">Boxing is often misunderstood. It is not about hurting others—it is about mastering yourself. Born from ancient combat traditions, boxing represents discipline in its rawest form.
+            
+            Falling is expected. Standing back up is mandatory. It teaches fighters to face fear directly, to control anger, and to respect their opponent. Boxing is not about winning fights. It is about winning battles within.</p>
+        </div>
+    </section>
+
+    <section class="page" id="p-kabaddi">
+        <div class="story-box" style="border-top-color: #8b4513;">
+            <h2 class="sport-title">Kabaddi</h2>
+            <span class="tagline" style="color: #8b4513;">The Ancient Breath of Courage</span>
+            <p class="content-text">Kabaddi comes from the earth. It is primal, instinctive, and fearless. One breath, one chance—that was life. It teaches balance between aggression and control.
+            
+            The defenders represent unity. Alone, they are weak. Together, they are unstoppable. Kabaddi shows that intelligence defeats brute strength, and teamwork defeats ego. It carries the spirit of rural India—raw, honest, and fearless.</p>
+        </div>
+    </section>
+
+    <section class="page" id="p-olympics">
+        <div class="story-box" style="border-top-color: #00ff00;">
+            <h2 class="sport-title">Olympics</h2>
+            <span class="tagline" style="color: #00ff00;">Where Humanity Competes With Itself</span>
+            <p class="content-text">The Olympics were born not to divide nations, but to unite them. Every Olympic athlete carries years of unseen struggle. Early mornings. Injuries. Sacrifices.
+            
+            The Olympics remind the world that excellence has no nationality. Respect matters more than victory. Effort matters more than outcome. When the Olympic flame burns, humanity remembers what it can be at its best.</p>
+        </div>
+    </section>
+
+    <section class="page" id="p-badminton">
+        <div class="story-box" style="border-top-color: #f0f;">
+            <h2 class="sport-title">Badminton</h2>
+            <span class="tagline" style="color: #f0f;">Silence, Speed, Precision</span>
+            <p class="content-text">Badminton looks gentle—but it is ruthless. Every rally is a test of reflex, patience, and control. It rewards calm minds and sharp bodies.
+            
+            Badminton teaches timing. Strike too early, you lose. Too late, you lose. It teaches players to stay light, focused, and disciplined. In the quiet of the court, pressure speaks loudly. That is where champions are made.</p>
+        </div>
+    </section>
+
+    <div class="nav-dock">
+        <div class="search-container">
+            <input type="text" id="codexSearch" placeholder="Neural Search (e.g. Boxing)..." onkeyup="filterCodex()">
+        </div>
+        <div class="nav-links">
+            <button class="nav-btn founder-btn" onclick="jump('aryan')">ARYAN</button>
+            <button class="nav-btn" onclick="jump('cricket')">CRICKET</button>
+            <button class="nav-btn" onclick="jump('football')">FOOTBALL</button>
+            <button class="nav-btn" onclick="jump('basketball')">BASKETBALL</button>
+            <button class="nav-btn" onclick="jump('boxing')">BOXING</button>
+            <button class="nav-btn" onclick="jump('kabaddi')">KABADDI</button>
+            <button class="nav-btn" onclick="jump('olympics')">OLYMPICS</button>
+            <button class="nav-btn" onclick="jump('badminton')">BADMINTON</button>
+        </div>
+    </div>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 40 },
+                "color": { "value": "#00f2ff" },
+                "line_linked": { "enable": true, "distance": 150, "color": "#00f2ff", "opacity": 0.15 },
+                "move": { "enable": true, "speed": 1 }
+            }
+        });
+
+        function jump(id) {
+            gsap.to(window, {
+                duration: 1.5,
+                scrollTo: "#p-" + id,
+                ease: "expo.inOut"
+            });
+            gsap.fromTo("#p-" + id + " .story-box", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1 });
+        }
+
+        function filterCodex() {
+            let input = document.getElementById('codexSearch').value.toLowerCase();
+            let btns = document.querySelectorAll('.nav-btn');
+            
+            btns.forEach(btn => {
+                let text = btn.innerText.toLowerCase();
+                if (text.includes(input)) {
+                    btn.style.opacity = "1";
+                    btn.style.color = "var(--neon-blue)";
+                } else {
+                    btn.style.opacity = "0.3";
+                    btn.style.color = "#666";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
